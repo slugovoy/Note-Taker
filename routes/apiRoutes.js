@@ -7,7 +7,7 @@ const notesDataBase = require("../db/db.json");
 module.exports = function (app) {
 
   // Function to write new notes to data base
-  function updateDbJson() {
+  function updateNotesDataBase() {
     // Write to file method
     writeFile("./db/db.json",JSON.stringify(notesDataBase), err => {
       if(err){
@@ -39,7 +39,7 @@ module.exports = function (app) {
     // Push new note to data base
     notesDataBase.push(newNote);
     // Rewrite  data base file with new array
-    updateDbJson();
+    updateNotesDataBase();
 
     // Send new note back
     res.json(newNote);
@@ -56,7 +56,7 @@ module.exports = function (app) {
       }
     }
     // Rewrite  data base file with new array
-    updateDbJson();
+    updateNotesDataBase();
     // Send data to the front end
     res.json(notesDataBase);
   });
