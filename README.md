@@ -19,7 +19,7 @@ For users that need to keep track of a lot of information, it's easy to forget o
 
 * Gif:
 
-![App Demo](./public/assets/imagesGif/AppDemo.gif)
+![App Demo](./public/assets/imagesGif/AppDemo1.gif)
 
 * Instructions:
 
