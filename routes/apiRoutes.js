@@ -25,13 +25,12 @@ module.exports = function (app) {
     let newNote = req.body;
     let Id = 1;
 
-    // Loop to check if note already has id and if so, compare with i
+    // Loop to check if note already has id and if so, compare with element i id
     for (let i = 1; i < notesDataBase.length; i++) {
       let oneNote = notesDataBase[i];
 
-      if (oneNote.id > Id) {
-        Id = oneNote.id;
-      }
+      if (oneNote.id > Id) Id = oneNote.id;
+      
     }
     // Assign new value to id of new note
     newNote.id = Id + 1;
