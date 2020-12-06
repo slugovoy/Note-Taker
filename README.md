@@ -19,7 +19,7 @@ For users that need to keep track of a lot of information, it's easy to forget o
 
 * Gif:
 
-![App Demo]()
+![App Demo](./public/assets/imagesGif/AppDemo.gif)
 
 * Instructions:
 
@@ -31,13 +31,13 @@ Press that button and you will be redirected to the actual note page.
 
 ![Note's Page](./public/assets/imagesGif/NotesPage.png)
 
-Here you have to fields;
+Here you have two fields:
 1. Left side - area, where all notes stored.
 2. Right side - area, where you can write your notes.
 
 When the title of the note and actual note's text entered, the icon **Save** will pop out at the right top corner. Press it and save your notes.
 
-Press one of the saved notes and then the pencil icon - you can edit your note now.
+Press one of the saved notes and then the **Pencil** icon - you can edit your note now.
 
 ![Buttons](./public/assets/imagesGif/Buttons.png)
 
