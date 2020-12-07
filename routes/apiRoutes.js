@@ -1,5 +1,4 @@
 // Variables
-const { readFile } = require("fs");
 const { writeFile } = require("fs");
 const notesDataBase = require("../db/db.json");
 
