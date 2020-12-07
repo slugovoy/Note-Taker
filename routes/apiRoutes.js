@@ -1,6 +1,7 @@
 // Variables
 const { writeFile } = require("fs");
 const notesDataBase = require("../db/db.json");
+const { v4: uuidv4 } = require('uuid');
 
 // Main function
 module.exports = function (app) {
@@ -21,19 +22,11 @@ module.exports = function (app) {
 
   // Method to add(post) new notes to data base and create unique ID for each note.
   app.post("/api/notes", function (req, res) {
+    
     let newNote = req.body;
-    let Id = 1;
-
-    // Loop to check if note already has id and if so, compare with element i id
-    for (let i = 1; i < notesDataBase.length; i++) {
-      let oneNote = notesDataBase[i];
-
-      if (oneNote.id > Id) Id = oneNote.id;
-      
-    }
-    // Assign new value to id of new note
-    newNote.id = Id + 1;
-
+    // Using uuid method to generate unique id
+    newNote.id = uuidv4();
+    
     // Push new note to data base
     notesDataBase.push(newNote);
     // Rewrite  data base file with new array
