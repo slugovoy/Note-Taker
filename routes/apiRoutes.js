@@ -16,13 +16,11 @@ module.exports = function (app) {
     })
   }
   // Method to get data from data base when requested
-  app.get("/api/notes", function (req, res) {
-    res.json(notesDataBase);
-  });
+  app.get("/api/notes",  (req, res) => res.json(notesDataBase));
 
   // Method to add(post) new notes to data base and create unique ID for each note.
-  app.post("/api/notes", function (req, res) {
-    
+  app.post("/api/notes",  (req, res) => {
+
     let newNote = req.body;
     // Using uuid method to generate unique id
     newNote.id = uuidv4();
@@ -37,7 +35,7 @@ module.exports = function (app) {
   });
 
   // Method to delete note from data base according to it ID
-  app.delete("/api/notes/:id", function (req, res) {
+  app.delete("/api/notes/:id",  (req, res) => {
     // Loop through da base to find note with id that supposed to delete
     for (let i = 0; i < notesDataBase.length; i++) {
       if (notesDataBase[i].id == req.params.id) {
